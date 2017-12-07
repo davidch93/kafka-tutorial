@@ -16,14 +16,30 @@
 
 	<properties>
 		<kafka.version>1.0.0</kafka.version>
+		<logback.version>1.2.3</logback.version>
+		<jackson-mapper.version>1.9.13</jackson-mapper.version>
 	</properties>
 
 	<dependencies>
 		<!-- Kafka -->
 		<dependency>
-		    <groupId>org.apache.kafka</groupId>
-		    <artifactId>kafka-clients</artifactId>
-		    <version>${kafka.version}</version>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+
+		<!-- Logback -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+
+		<!-- Jackson Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper.version}</version>
 		</dependency>
 	</dependencies>
 </project>

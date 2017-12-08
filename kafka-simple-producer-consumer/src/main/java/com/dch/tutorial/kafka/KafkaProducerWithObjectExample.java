@@ -22,7 +22,7 @@ public class KafkaProducerWithObjectExample {
 	 * 
 	 * @return {@link KafkaProducer}
 	 */
-	private static Producer<Long, User> createProducer() {
+	private Producer<Long, User> createProducer() {
 		Properties props = new Properties();
 		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
 		props.put(ProducerConfig.CLIENT_ID_CONFIG, "KafkaProducerExample");
@@ -40,7 +40,7 @@ public class KafkaProducerWithObjectExample {
 	 * @throws Exception
 	 *             If error occurred when send message.
 	 */
-	public static void runProducerSync(final int sendMessageCount) throws Exception {
+	public void runProducerSync(final int sendMessageCount) throws Exception {
 		final Producer<Long, User> producer = createProducer();
 		long time = System.currentTimeMillis();
 
@@ -65,6 +65,6 @@ public class KafkaProducerWithObjectExample {
 	}
 
 	public static void main(String... args) throws Exception {
-		runProducerSync(5);
+		new KafkaProducerWithObjectExample().runProducerSync(5);
 	}
 }

@@ -27,7 +27,7 @@ public class KafkaProducerExample {
 	 * 
 	 * @return {@link KafkaProducer}
 	 */
-	private static Producer<Long, String> createProducer() {
+	private Producer<Long, String> createProducer() {
 		Properties props = new Properties();
 		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
 		props.put(ProducerConfig.CLIENT_ID_CONFIG, "KafkaProducerExample");
@@ -45,7 +45,7 @@ public class KafkaProducerExample {
 	 * @throws Exception
 	 *             If error occurred when send message.
 	 */
-	public static void runProducerSync(final int sendMessageCount) throws Exception {
+	public void runProducerSync(final int sendMessageCount) throws Exception {
 		final Producer<Long, String> producer = createProducer();
 		long time = System.currentTimeMillis();
 
@@ -84,7 +84,7 @@ public class KafkaProducerExample {
 	 * @throws InterruptedException
 	 *             If error occurred when send message.
 	 */
-	public static void runProducerAsync(final int sendMessageCount) throws InterruptedException {
+	public void runProducerAsync(final int sendMessageCount) throws InterruptedException {
 		final Producer<Long, String> producer = createProducer();
 		long time = System.currentTimeMillis();
 		final CountDownLatch countDownLatch = new CountDownLatch(sendMessageCount);
@@ -113,7 +113,7 @@ public class KafkaProducerExample {
 	}
 
 	public static void main(String... args) throws Exception {
-		runProducerSync(5);
-		runProducerAsync(5);
+		new KafkaProducerExample().runProducerSync(5);
+		new KafkaProducerExample().runProducerAsync(5);
 	}
 }

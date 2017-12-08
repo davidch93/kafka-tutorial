@@ -25,7 +25,7 @@ public class KafkaConsumerExample {
 	 * 
 	 * @return {@link KafkaConsumer}
 	 */
-	private static Consumer<Long, String> createConsumer() {
+	private Consumer<Long, String> createConsumer() {
 		final Properties props = new Properties();
 		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
 		props.put(ConsumerConfig.GROUP_ID_CONFIG, "KafkaConsumerExample");
@@ -40,7 +40,10 @@ public class KafkaConsumerExample {
 		return consumer;
 	}
 
-	public static void runConsumer() throws InterruptedException {
+	/**
+	 * Method used to run Kafka Consumer.
+	 */
+	public void runConsumer() {
 		final Consumer<Long, String> consumer = createConsumer();
 
 		final int giveUp = 100;
@@ -67,6 +70,6 @@ public class KafkaConsumerExample {
 	}
 
 	public static void main(String... args) throws Exception {
-		runConsumer();
+		new KafkaConsumerExample().runConsumer();
 	}
 }

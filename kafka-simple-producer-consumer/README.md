@@ -2,7 +2,7 @@
 Kafka simple Producer & Consumer tutorial.
 
 ## Basic Knowledge
-Source http://cloudurable.com/blog/kafka-tutorial-kafka-failover-kafka-cluster/index.html
+1. [Kafka Failover Cluster](http://cloudurable.com/blog/kafka-tutorial-kafka-failover-kafka-cluster/index.html)
 
 ## Before You Start
 1. Copy server properties file

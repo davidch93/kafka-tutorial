@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.dch.tutorial</groupId>
+		<artifactId>kafka-tutorial</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.dch.tutorial.kafka</groupId>
+	<artifactId>kafka-store-with-hbase</artifactId>
+	<packaging>jar</packaging>
+	<name>Kafka Store With HBase Tutorial</name>
+
+	<properties>
+		<kafka.version>1.0.0</kafka.version>
+		<hbase.version>1.3.1</hbase.version>
+		<jackson-mapper.version>1.9.13</jackson-mapper.version>
+	</properties>
+
+	<dependencies>
+		<!-- Kafka -->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+
+		<!-- HBase -->
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-client</artifactId>
+			<version>${hbase.version}</version>
+		</dependency>
+
+		<!-- Jackson Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper.version}</version>
+		</dependency>
+	</dependencies>
+</project>

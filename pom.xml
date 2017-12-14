@@ -18,5 +18,6 @@
 
 	<modules>
 		<module>kafka-simple-producer-consumer</module>
+		<module>kafka-store-with-hbase</module>
 	</modules>
 </project>

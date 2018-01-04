@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.dch.tutorial</groupId>
-		<artifactId>kafka-tutorial</artifactId>
-		<version>1.0.0</version>
-	</parent>
+    <parent>
+        <groupId>com.dch.tutorial</groupId>
+        <artifactId>kafka-tutorial</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
-	<groupId>com.dch.tutorial.kafka</groupId>
-	<artifactId>kafka-simple-producer-consumer</artifactId>
-	<packaging>jar</packaging>
-	<name>Kafka Simple Producer Consumer Tutorial</name>
+    <groupId>com.dch.tutorial.kafka</groupId>
+    <artifactId>kafka-simple-producer-consumer</artifactId>
+    <packaging>jar</packaging>
+    <name>Kafka Simple Producer Consumer Tutorial</name>
 
-	<properties>
-		<kafka.version>1.0.0</kafka.version>
-		<logback.version>1.2.3</logback.version>
-		<jackson-mapper.version>1.9.13</jackson-mapper.version>
-	</properties>
+    <properties>
+        <kafka.version>1.0.0</kafka.version>
+        <logback.version>1.2.3</logback.version>
+        <jackson-mapper.version>1.9.13</jackson-mapper.version>
+    </properties>
 
-	<dependencies>
-		<!-- Kafka -->
-		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-clients</artifactId>
-			<version>${kafka.version}</version>
-		</dependency>
+    <dependencies>
+        <!-- Kafka -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
 
-		<!-- Logback -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
+        <!-- Logback -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
 
-		<!-- Jackson Mapper -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson-mapper.version}</version>
-		</dependency>
-	</dependencies>
+        <!-- Jackson Mapper -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson-mapper.version}</version>
+        </dependency>
+    </dependencies>
 </project>
